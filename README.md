@@ -13,7 +13,7 @@ This project is a serverless application that sends GuardDuty findings to Slack.
 ![IMAGE ALT TEXT HERE](Capture.png)
 
 ### My lambda function `gd-notify-rayane`
-- First, the handler functions is exported as the entry point of the code to be fired. Obviously it would be asynchronous since it handles many HTTP requests.
+- First, the handler functions is exported as the entry point of the code to be fired. Obviously it would be asynchronous since it handles HTTP requests.
 - We Check if the event contains any records, if so we process each SNS record by parsing its content.
 - We encapsulate the title, description and the severity color of the finding into one message.
 - We stringify the `message` so that all the properties and values within the object are converted to their JSON string representation. This ensures that the payload sent in the HTTP request body is in the correct format expected by the recipient, in this case, the Slack webhook.
