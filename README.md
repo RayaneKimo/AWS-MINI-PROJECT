@@ -1,4 +1,4 @@
-# Solution : GuardDuty Alerting in Slack - Mini Project
+# Report : GuardDuty Alerting in Slack - Mini Project
 
 ## Project Overview
 This project is a serverless application that sends GuardDuty findings to Slack. It uses AWS Lambda to process GuardDuty findings and sends them to Slack using a webhook.
