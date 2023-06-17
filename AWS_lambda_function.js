@@ -39,10 +39,12 @@ export const handler = async (event) => {
                 {
                   title: "Title",
                   value: Finding_detail.title,
+                  short: true,
                 },
                 {
                   title: "Description",
                   value: Finding_detail.description,
+                  short: false,
                 },
               ],
             },
