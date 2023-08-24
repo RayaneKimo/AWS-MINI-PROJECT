@@ -1,4 +1,4 @@
-# Report : GuardDuty Alerting in Slack - Mini Project
+# GuardDuty Alerting in Slack - Mini Project
 
 ## Project Overview
 This project is a serverless application that sends GuardDuty findings to Slack. It uses AWS Lambda to process GuardDuty findings and sends them to Slack using a webhook.
@@ -22,7 +22,7 @@ This project is a serverless application that sends GuardDuty findings to Slack.
 
 ## Task2
 
-For the second task, I chose the `Impact:S3/AnomalousBehavior.Delete` finding which lies about when an IAM entity invoked an S3 API that attempts to delete data in a suspicious way. This type of findings are Highly classified in severity as client data are threatened for deletion. 
+Let's discuss one of the main issues `Impact:S3/AnomalousBehavior.Delete` finding which lies about when an IAM entity invoked an S3 API that attempts to delete data in a suspicious way. This type of findings are Highly classified in severity as client data are threatened for deletion. 
 Referring to the AWS documentation, it turns out that it may occur when the credentials have been exposed or the S3 permissions are not restrictive enough. So to remediate I propose : 
 * `To isolate the affected IAM entity` : We should identify and isolate (delete, freeze ..) the IAM entity responsible for the suspicious behavior. This could be a user, group or a role with the necessary permissions to delete S3 data.
 * `To revoke access` : We should immediately revoke the IAM entity's access privileges to prevent any further unauthorized deletions. This consist of modifing the IAM policies associated with the entity, removing the permissions necessary for data deletion.
